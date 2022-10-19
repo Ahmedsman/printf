@@ -1,9 +1,8 @@
 #include "main.h"
 
 /************************* WRITE HANDLE *************************/
-
 /**
- * handle_write_char - Prints a string
+ * handle_write_char - Prints string
  * @c: char types.
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags.
@@ -55,6 +54,7 @@ int handle_write_char(char c, char buffer[],
  * @width: get width.
  * @precision: precision specifier
  * @size: Size specifier
+ *
  * Return: Number of chars printed.
  */
 int write_number(int is_negative, int ind, char buffer[],
@@ -73,6 +73,7 @@ int write_number(int is_negative, int ind, char buffer[],
 		extra_ch = '+';
 	else if (flags & F_SPACE)
 		extra_ch = ' ';
+
 	return (write_num(ind, buffer, flags, width, precision,
 		length, padd, extra_ch));
 }
